@@ -44,7 +44,7 @@ while True:
     
     previous_page_link()
     #break when the last page is finished
-    if previous_page_link() == None:
+    if url == "https://www.ptt.cc/bbs/MakeUp/index1.html":
         break
     url = previous_page_link()
     
