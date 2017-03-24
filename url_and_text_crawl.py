@@ -42,10 +42,10 @@ while True:
     page_count += 1   #bar
     bar.update(page_count)  #bar
     
-    previous_page_link()
     #break when the last page is finished
     if url == "https://www.ptt.cc/bbs/MakeUp/index1.html":
         break
+    previous_page_link()
     url = previous_page_link()
     
     
