@@ -6,15 +6,13 @@ import progressbar
 
 
 domain = "https://www.ptt.cc/"
-url = "https://www.ptt.cc/bbs/MakeUp/index.html"
+url = "https://www.ptt.cc/bbs/MakeUp/index3.html"
 
 
 url_list = []
 
 
 def serp_title_link():
-    serp_url = requests.get(url).text
-    soup = BeautifulSoup(serp_url, "html.parser")
     title = soup.find_all("div", class_ = "title")
     for i in title:
         if i.find("a") != None:
@@ -38,15 +36,19 @@ page_count = 0
 bar = progressbar.ProgressBar(max_value=progressbar.UnknownLength) 
 
 while True:
+    serp_url = requests.get(url).text
+    soup = BeautifulSoup(serp_url, "html.parser")
     serp_title_link()
-    page_count += 1   #bar
+    page_count += 1 #bar
     bar.update(page_count)  #bar
     
     #break when the last page is finished
-    if url == "https://www.ptt.cc/bbs/MakeUp/index1.html":
+    if url == "https://www.ptt.cc//bbs/MakeUp/index1.html":
         break
     previous_page_link()
     url = previous_page_link()
+    print(url)
+    
     
     
     #time.sleep(sleep)
@@ -75,3 +77,4 @@ print(url_list[-1])
 
 #for i in url_list:
 #    print(i)
+
