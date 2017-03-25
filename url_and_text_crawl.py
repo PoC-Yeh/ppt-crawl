@@ -47,10 +47,8 @@ while True:
         break
     previous_page_link()
     url = previous_page_link()
-    print(url)
-    
-    
-    
+    #print(url)
+  
     #time.sleep(sleep)
     #sleep += 0.01
     
@@ -72,7 +70,6 @@ while True:
         f.close()
     
     
-
 print(url_list[-1])
 
 #for i in url_list:
