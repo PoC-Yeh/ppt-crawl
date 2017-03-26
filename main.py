@@ -2,6 +2,7 @@ import csv
 import progressbar
 import re
 import requests
+import time
 from bs4 import BeautifulSoup
 from url_crawl import serp_title_link,previous_page_link
 from text_crawl import text_without_garbage
@@ -48,7 +49,7 @@ while True:
     
 
     
-    
+
 url_text_dict = {} 
 with_keyword_text = {}
 
@@ -61,12 +62,12 @@ bar = progressbar.ProgressBar(max_value=progressbar.UnknownLength)
 
 for url in url_list:
     page_content = text_without_garbage(url)
-    print(page_content)
+    #print(page_content)
     url_text_dict[url] = page_content
     
     for sentence in page_content:
         if keyword in sentence:
-            with_keyword_text[url] = page_content
+            with_keyword_text[url] = page_content[3:]  #without meta data
             
     url_count += 1 #bar
     bar.update(url_count)  #bar
@@ -86,3 +87,6 @@ for url in url_list:
         w2 = csv.writer(f2)
         w2.writerows(with_keyword_text.items())
         f2.close()
+        
+    if url_count % 2000 = 0:
+        time.sleep(60*15)
