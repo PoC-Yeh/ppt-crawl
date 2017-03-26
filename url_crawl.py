@@ -5,10 +5,6 @@ import csv
 import progressbar 
 
 
-domain = "https://www.ptt.cc/"
-url = "https://www.ptt.cc/bbs/MakeUp/index3.html"
-
-
 def serp_title_link():
     title = soup.find_all("div", class_ = "title")
     for i in title:
