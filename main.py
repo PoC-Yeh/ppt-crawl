@@ -1,3 +1,6 @@
+import time
+import csv
+import progressbar 
 from url_crawl import serp_title_link,previous_page_link
 from text_crawl import text_without_garbage
 
