@@ -1,5 +1,8 @@
 import csv
-import progressbar 
+import progressbar
+import re
+import requests
+from bs4 import BeautifulSoup
 from url_crawl import serp_title_link,previous_page_link
 from text_crawl import text_without_garbage
 
