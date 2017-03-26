@@ -88,5 +88,5 @@ for url in url_list:
         w2.writerows(with_keyword_text.items())
         f2.close()
         
-    if url_count % 2000 = 0:
+    if url_count % 2000 == 0:
         time.sleep(60*15)
