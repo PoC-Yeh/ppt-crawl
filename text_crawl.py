@@ -52,7 +52,7 @@ def text_without_garbage(url):
         new_text = list(filter(lambda x: x not in garbage, text))
         without_name.append(new_text)
     
-    others = ["(", "（", ")", "）", ",", "「", "」", "。", "!", "！", ".", "～", ":", "~", "^" ,"?", "？", "＋", "+", "，"]
+    others = ["(", "（", ")", "）", ",", "「", "」", "。", "!", "！", ".", "～", ":", "~", "^" ,"?", "？", "＋", "+", "，", "＝", "*"]
     final = []
     for wn in without_name:
         for wn_inside in wn:
