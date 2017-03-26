@@ -2,6 +2,10 @@ from url_crawl import serp_title_link,previous_page_link
 from text_crawl import text_without_garbage
 
 
+domain = "https://www.ptt.cc/"
+url = "https://www.ptt.cc/bbs/MakeUp/index3.html"
+
+
 url_list = []
 count = 1
 #sleep = 0.1
