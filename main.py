@@ -1,4 +1,4 @@
-form url_crawl import serp_title_link,previous_page_link
+from url_crawl import serp_title_link,previous_page_link
 from text_crawl import text_without_garbage
 
 
