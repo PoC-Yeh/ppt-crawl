@@ -1,8 +1,5 @@
 from bs4 import BeautifulSoup
 import requests
-import time
-import csv
-import progressbar 
 
 
 def serp_title_link():
