@@ -58,5 +58,6 @@ def text_without_garbage(url):
         for wn_inside in wn:
             without_others = list(filter(lambda x: x not in others, wn_inside))
             if len(without_others) > 0:
-                final.append("".join(without_others))
+                join_without_other = "".join(without_others).strip()
+                final.append(join_without_other)
     return(final)   
