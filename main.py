@@ -10,7 +10,7 @@ from text_crawl import text_without_garbage
 
 
 domain = "https://www.ptt.cc/"
-url = "https://www.ptt.cc/bbs/MakeUp/index3.html"
+url = "https://www.ptt.cc/bbs/MakeUp/index.html"
 
 
 url_list = []
